@@ -1,8 +1,4 @@
-dotnet publish -c Release 
-
-cp dockerfile ./bin/release/netcoreapp3.0/publish
-
-docker build -t sdg-words-image ./bin/release/netcoreapp3.0/publish
+docker build -t sdg-words-image .
 
 docker tag sdg-words-image registry.heroku.com/sdg-words/web
 
