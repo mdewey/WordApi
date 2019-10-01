@@ -4,7 +4,7 @@ cp dockerfile ./bin/release/netcoreapp3.0/publish
 
 docker build -t sdg-words-image ./bin/release/netcoreapp3.0/publish
 
-# docker tag sdg-words-image registry.heroku.com/sdg-words/web
+docker tag sdg-words-image registry.heroku.com/sdg-words/web
 
 
 # docker push registry.heroku.com/sdg-words/web
