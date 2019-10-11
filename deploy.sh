@@ -1,8 +1,7 @@
-docker build -t sdg-words-image .
+docker build -t my-cool-image .
 
-docker tag sdg-words-image registry.heroku.com/sdg-words/web
+docker tag my-cool-image registry.heroku.com/my-cool-heroku-name/web
 
-docker push registry.heroku.com/sdg-words/web
+docker push registry.heroku.com/my-cool-heroku-name/web
 
-heroku container:release web -a sdg-words
-# docker run -p 4000:80 sdg-words-image 
+heroku container:release web -a my-cool-heroku-name

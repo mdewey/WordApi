@@ -21,5 +21,10 @@ namespace WordApi.Controllers
     {
       return Ok(new { word = WordList.Words[new Random().Next(0, WordList.Words.Count)] });
     }
+    [HttpGet("random/{number}")]
+    public ActionResult GetRandomWord(int number)
+    {
+      return Ok(new { word = WordList.Words.OrderBy(o => Guid.NewGuid()).Take(number) });
+    }
   }
 }
